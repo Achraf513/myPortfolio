@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.sendFile('index.html',{root:__dirname})
 });
 app.get('/downloadCv', (req, res) => {
-    res.sendFile('Achraf_Affes_CV.pdf',{root:__dirname})
+    res.sendFile('Affes_Achraf_CV.pdf',{root:__dirname})
 });
 
 app.listen(port, () => {
