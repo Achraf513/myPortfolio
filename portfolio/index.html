@@ -19,14 +19,92 @@
       overflow-x: hidden;
       font-family: Raleway, sans-serif;
     }
+
+    #particles-js {
+      z-index: -1000;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: inherit;
+      background-color: #181818;
+    }
   </style>
-  <link rel="stylesheet" href="styles.dc075d57f1e878bc7e87.css" media="print" onload="this.media='all'"><noscript>
-    <link rel="stylesheet" href="styles.dc075d57f1e878bc7e87.css">
+  <link rel="stylesheet" href="styles.d2406b6aa828e727c8a0.css" media="print" onload="this.media='all'"><noscript>
+    <link rel="stylesheet" href="styles.d2406b6aa828e727c8a0.css">
   </noscript>
 </head>
 
 <body>
   <app-root></app-root>
+  <!-- particles.js container -->
+  <div id="particles-js">
+  </div>
+  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 250,
+          density: { enable: true, value_area: 3945.7382081613637 },
+        },
+        color: { value: "#ffffff" },
+        shape: {
+          type: "star",
+          stroke: { width: 2, color: "#4dd5f7" },
+          polygon: { nb_sides: 8 },
+          image: { src: "img/github.svg", width: 5, height: 5 },
+        },
+        opacity: {
+          value: 1,
+          random: true,
+          anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+        },
+        size: {
+          value: 1,
+          random: true,
+          anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+        },
+        line_linked: {
+          enable: true,
+          distance: 144.30708547789706,
+          color: "#4dd5f7",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 3,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "bounce",
+          bounce: false,
+          attract: { enable: false, rotateX: 600, rotateY: 1200 },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: false, mode: "repulse" },
+          onclick: { enable: false, mode: "repulse" },
+          resize: true,
+        },
+        modes: {
+          grab: { distance: 400, line_linked: { opacity: 1 } },
+          bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+          repulse: { distance: 200, duration: 0.4 },
+          push: { particles_nb: 4 },
+          remove: { particles_nb: 2 },
+        },
+      },
+      retina_detect: true,
+    });
+    requestAnimationFrame(update);
+
+  </script>
+  <!-- stats.js lib -->
+  <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -39,7 +117,7 @@
     crossorigin="anonymous"></script>
   <script src="runtime.3c207a4d0aa9faa06f84.js" defer></script>
   <script src="polyfills.afbf17fcf6d5f5184600.js" defer></script>
-  <script src="main.75e3ec07f4295c4de835.js" defer></script>
+  <script src="main.b6375d41e76d9fadccaf.js" defer></script>
 
 </body>
 
